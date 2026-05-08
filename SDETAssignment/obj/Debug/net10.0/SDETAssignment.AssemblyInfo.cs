@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SDETAssignment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c9889ad7b36aa8902368a44cb2522db93fe3f1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SDETAssignment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SDETAssignment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

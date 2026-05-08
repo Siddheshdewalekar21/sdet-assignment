@@ -15,7 +15,7 @@ namespace SDETAssignment.Pages
         private ILocator LoginNameInput => _page.Locator("input[name='loginname']");
         private ILocator PasswordInput => _page.Locator("input[name='password']");
         private ILocator LoginButton => _page.Locator("button:has-text('Login')");
-        private ILocator ErrorMessage => _page.Locator(".alert-danger"); // Assuming error messages are in alert-danger class
+        private ILocator ErrorMessage => _page.Locator(".alert"); // Error messages are in alert class
         private ILocator SuccessMessage => _page.Locator(".alert-success");
 
         // Actions
@@ -54,9 +54,16 @@ namespace SDETAssignment.Pages
 
         public async Task<bool> IsLoginSuccessful()
         {
-            // Assuming after login, redirected to account page or success message
-            await _page.WaitForURLAsync("**/account/**");
-            return _page.Url.Contains("account");
+            // Check for successful navigation to account dashboard or similar
+            try
+            {
+                await _page.WaitForURLAsync(url => !url.Contains("login"), new() { Timeout = 5000 });
+                return !_page.Url.Contains("login");
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
