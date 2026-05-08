@@ -1,0 +1,44 @@
+# Build results
+bin/
+obj/
+out/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Build folder
+packages/
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Playwright
+Playwright/
+
+# Test Results
+TestResults/
+*.trx
+
+# IDE
+*.csproj.user
+*.sln.DotSettings
+*.sln.DotSettings.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Local environment
+.env
+.env.local
